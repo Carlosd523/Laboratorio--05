@@ -70,7 +70,7 @@ class Program
         {
             arbitrio = 00.00;
         }
-        else if (salary >= 500.01 && salary<= 1000.00)
+        else if (salary<= 1000.00)
         {
             arbitrio = 10.00;
         }
