@@ -120,5 +120,51 @@ class Program
 
         // Ejercicio número 4
 
+        // Entradas - El usuario ingresa las horas estacionadas, se calcula el monto a pagar y el monto ingresado como números enteros.
+        Console.WriteLine("Ingrese la cantidad de horas que estuvo parqueado");
+        string horas = Console.ReadLine();
+        int hours = int.Parse(horas!);
+        int payment = hours * 10;
+        Console.WriteLine("Ingrese el monto que va a ingresar para pagar el parqueo");
+        string mont = Console.ReadLine();
+        int amount = int.Parse(mont!);
+
+        // Proceso - Se indica si la cantidad ingresada no es suficiente, si es la justa o si se le tiene que dar cambio al usuario.
+        if(payment > amount)
+        {
+            // Posible salida 1
+            Console.WriteLine("¡Error! Los fondos ingresados son insuficientes");
+        }else if(payment == amount)
+        {
+            // Posible salida 2
+            Console.WriteLine("No se requiere cambio, ¡Feliz día!");
+        }
+        else
+        {
+            int cambio = amount - payment;
+            int resto = 0;
+
+            // Proceso para determinar la cantidad de billetes devueltos en cambio
+            int billete100 = cambio / 100;
+            resto = cambio % 100;
+            int billete50 = resto / 50;
+            resto = resto % 50;
+            int billete20 = resto / 20;
+            resto = resto % 20;
+            int billete10 = resto / 10;
+            resto = resto % 10;
+            int billete5 = resto / 5;
+            resto = resto % 5;
+            int billete1 = resto / 1;
+
+            // Posible salida 3
+            Console.WriteLine("Se le dará Q" + cambio + " de cambio");
+            Console.WriteLine("Billetes de Q100 devueltos: " + billete100);
+            Console.WriteLine("Billetes de Q50 devueltos: " + billete50);
+            Console.WriteLine("Billetes de Q20 devueltos: " + billete20);
+            Console.WriteLine("Billetes de Q10 devueltos: " + billete10);
+            Console.WriteLine("Billetes de Q5 devueltos: " + billete5);
+            Console.WriteLine("Billetes de Q1 devueltos: " + billete1);
+        }
     }
 }
