@@ -66,7 +66,11 @@ class Program
         // Proceso - Se determina el boleto de ornato a pagar
         // Bloque if 1 - Determinar el arbitrio a pagar
         double arbitrio = 0;
-        if (salary >= 500.01 && salary<= 1000.00)
+        if(salary < 500.01)
+        {
+            arbitrio = 00.00;
+        }
+        else if (salary >= 500.01 && salary<= 1000.00)
         {
             arbitrio = 10.00;
         }
@@ -86,13 +90,9 @@ class Program
         {
             arbitrio = 100.00;
         }
-        else if (salary >= 12000.01)
-        {
-            arbitrio = 150.00;
-        }
         else
         {
-            arbitrio = 00.00;
+            arbitrio = 150.00;
         }
 
         // Bloque if 2 - Determinar el monto a pagar teniendo en consideración la multa
