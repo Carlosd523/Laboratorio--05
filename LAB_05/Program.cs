@@ -3,6 +3,8 @@ class Program
 {
     static void Main()
     {
+        // Ejercicio número 1
+
         // Entradas - Se le pide al usuario que ingrese un número entero.
         Console.WriteLine("Ingrese un número entero");
         string numero = Console.ReadLine();
@@ -25,4 +27,14 @@ class Program
         }
 
     }
+
+        // Ejercicio número 2
+
+
+
+        //Ejercicio número 3
+
+
+
+        // Ejercicio número 4
 }
