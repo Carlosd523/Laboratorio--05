@@ -66,7 +66,7 @@ class Program
         // Proceso - Se determina el boleto de ornato a pagar
         // Bloque if 1 - Determinar el arbitrio a pagar
         double arbitrio = 0;
-        if (salary >= 500.01)
+        if (salary <= 500.01)
         {
             arbitrio = 10.00;
         }
